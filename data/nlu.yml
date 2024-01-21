@@ -1,0 +1,117 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+
+- intent: supply_league
+  examples: |
+    - I'm interested in [La Liga](league)
+    - [K-League](league)
+    - [Premier League](league)
+    - [League1](league)
+
+- intent: supply_position
+  examples: |
+    - I'm interested in [MF](position)
+    - [winger](position)
+    - [ST](position)
+    - [striker](position)
+    - [goal keeper](position)
+    - [RW](position)
+    - [LW](position)
+    - [CB](position)
+    - [CAM](position)
+
+- intent: supply_style
+  examples: |
+    - I'm interested in [goal scorer](style)
+    - [assist](style)
+    - [defensive MF](style)
+    - [save](style)
+
+- intent: supply_strength
+  examples: |
+    - I'm interested in [fast](strength)
+    - [physical](strength)
+    - [pass](strength)
+    - [speed](strength)
+    - [shoot](strength)
+    - [technique](strength)
+    - [dribble](strength)
+    - [game control](strength)
+    - [score](strength)
+    - [positioning](strength)
+    - [foot](strength)
+
+- intent: supply_formation 
+  examples: |
+    - [442](formation)
+    - [4231](formation)
+    - [352](formation)
+    - [343](formation)
+    - [433](formation)
+  
+    
+- intent: reply_utter_ask_potential
+  examples: |
+    - {Kangin Lee}(name).
+    - {Heungmin Son}(name).
+    - {Mitoma}(name).
+    - {Minjae Kim}(name).
+    - {Halland}(name).
+    - I want to know {Kim}(name)potential.
+    - Is {Kubo}(name) potential high?
+    - Show (Halland)(name) potential
+
+
+- intent: sick
+  examples: |
+    - I'm sick
+    - sick
+    - sick.
+    
+- intent: sick_again
+  examples: |
+    - I want to see players in DB.
+    - show players.
+    - Who is in the list?
+
+- intent: recommend_player
+  examples: |
+    - Recommend a football player
+    - Recommend player.
+    - Can you recommend player?
+
+- intent: recommend_coach
+  examples: |
+    - I want to find football coach.
+    - I find coach.
+    - Famous coach I want.

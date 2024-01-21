@@ -1,0 +1,90 @@
+version: "3.1"
+
+stories:
+
+- story: bye path
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+- story: sick
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: sick
+  - action: utter_T
+  - intent: sick_again
+  - action: action_fetch_all_players
+
+- story: sick_again
+  steps:
+  - intent: sick_again
+  - action: action_fetch_all_players
+
+- story: recommend_coach
+  steps:  
+  - intent: recommend_coach
+  - action: utter_recommend_coach
+  - action: utter_ask_formation
+
+- story: get_formation
+  steps:
+    - intent: supply_formation
+      entities:
+      - formation
+    - action: action_store_formation
+    - action: action_recommend_coach
+    
+- story: recommend_player
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: recommend_player
+  - action: utter_recommend_player
+  - action: utter_ask_league
+
+- story: get_league
+  steps:
+  - intent: supply_league
+    entities:
+    - league
+  - action: action_store_league
+  - action: utter_ask_position
+
+- story: get_position
+  steps:
+  - intent: supply_position
+    entities:
+    - position
+  - action: action_store_position
+  - action: utter_ask_style
+
+- story: get_style
+  steps:
+  - intent: supply_style
+    entities:
+    - style
+  - action: action_store_style
+  - action: utter_ask_strength
+
+- story: get_strength
+  steps:
+  - intent: supply_strength
+    entities:
+    - strength
+  - action: action_store_strength
+  - action: action_check_slots
+  - action: action_recommend_player
+  - action: utter_ask_potential
+  - intent: reply_utter_ask_potential
+  - action: action_check_slots
+  - action: action_check_potential
+
+- story: give_potential
+  steps:
+  - intent: reply_utter_ask_potential
+    entities:
+    - name
+  - action: action_check_slots
+  - action: action_check_potential

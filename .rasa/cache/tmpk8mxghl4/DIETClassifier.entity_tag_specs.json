@@ -1,0 +1,44 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-league",
+      "2": "I-league",
+      "3": "L-league",
+      "4": "U-league",
+      "5": "B-position",
+      "6": "I-position",
+      "7": "L-position",
+      "8": "U-position",
+      "9": "B-strength",
+      "10": "I-strength",
+      "11": "L-strength",
+      "12": "U-strength",
+      "13": "B-style",
+      "14": "I-style",
+      "15": "L-style",
+      "16": "U-style",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-league": 1,
+      "I-league": 2,
+      "L-league": 3,
+      "U-league": 4,
+      "B-position": 5,
+      "I-position": 6,
+      "L-position": 7,
+      "U-position": 8,
+      "B-strength": 9,
+      "I-strength": 10,
+      "L-strength": 11,
+      "U-strength": 12,
+      "B-style": 13,
+      "I-style": 14,
+      "L-style": 15,
+      "U-style": 16,
+      "O": 0
+    },
+    "num_tags": 17
+  }
+]

@@ -1,0 +1,137 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - recommend_player
+  - recommend_coach
+  - supply_league
+  - supply_position
+  - supply_style
+  - supply_strength
+  - supply_formation
+  - sick
+  - sick_again
+  - reply_utter_ask_potential
+
+entities:
+  - league
+  - style
+  - strength
+  - position
+  - formation
+  - potential
+
+
+slots:
+  league:
+    type: text
+    mappings:
+      - type: from_text
+        entity: league
+
+  position:
+    type: text
+    mappings:
+      - type: from_text
+        entity: position
+
+  style:
+    type: text
+    mappings:
+      - type: from_text
+        entity: style
+
+  strength:
+    type: text 
+    mappings:
+      - type: from_text
+        entity: strength
+  
+  name: 
+    type: text
+    mappings:
+      - type: from_text
+        entity: name
+
+  formation:
+    type: text
+    mappings:
+      - type: from_text
+        entity: formation
+
+  recommended_player:
+    type: text
+    mappings:
+      - type: from_text
+        entity: recommended_player
+
+responses:
+  utter_greet:
+  - text: "Hey! What do you want?"
+
+  utter_goodbye:
+  - text: "Bye. press /stop to quit"
+
+  utter_ask_league:
+  - text: "Which league are you interested in?"
+
+  utter_ask_position:
+  - text: "What is the player's position you are looking for? ex)ST, RW, CAM, GK"
+
+  utter_ask_style:
+  - text: "What is the playing style you prefer? ex) goal scorer, assist, crack"
+
+  utter_ask_strength:
+  - text: "What are the player's strengths? ex) shoot, speed, dribble, technique, build-up"
+
+  utter_recommend_player:
+  - text: "Sure. I can recommend player you want."
+
+  utter_recommend_coach:
+  - text: "Sure. I can recommend coach you want."
+
+  utter_ask_formation:
+  - text: "What formation you like?"
+
+  utter_T:
+  - text: "So what?"
+
+  utter_F:
+  - text: "Are you OK?"
+
+  utter_preference_league:
+    - text: "You prefer the {league} league."
+
+  utter_preference_position:
+    - text: "You prefer the {position} position."
+
+  utter_preference_style:
+    - text: "You prefer the {style} playing style."
+
+  utter_preference_strength:
+    - text: "You prefer players with {strength} strength."
+
+  utter_preference_formation:
+    - text: "You prefer {formation} formation."
+
+  utter_ask_potential:
+    - text: "Do you want to know about his potential? If you want, type player name."
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+  - action_recommend_player
+  - action_store_position
+  - action_store_league
+  - action_store_style
+  - action_store_strength
+  - action_check_slots
+  - action_store_formation
+  - action_fetch_all_players
+  - action_recommend_coach
+  - action_check_potential
+
